@@ -1,0 +1,44 @@
+{
+  "patient_id": 1,
+  "name": "John Doe",
+  "date_of_birth": "1990-01-01",
+  "gender": "male",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "zip": "12345"
+  },
+  "phone_number": "555-555-5555",
+  "email": "johndoe@example.com",
+  "medical_history": [
+    {
+      "condition": "hypertension",
+      "diagnosis_date": "2010-01-01",
+      "treatment": "medication"
+    },
+    {
+      "condition": "diabetes",
+      "diagnosis_date": "2015-01-01",
+      "treatment": "insulin"
+    }
+  ],
+  "medications": [
+    {
+      "name": "lisinopril",
+      "dosage": "10mg",
+      "frequency": "daily"
+    },
+    {
+      "name": "metformin",
+      "dosage": "500mg",
+      "frequency": "twice daily"
+    }
+  ],
+  "allergies": [
+    {
+      "allergen": "penicillin",
+      "reaction": "anaphylaxis"
+    }
+  ]
+}
