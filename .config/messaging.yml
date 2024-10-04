@@ -1,0 +1,27 @@
+messaging:
+  type: rabbitmq
+  host: localhost
+  port: 5672
+  username: myuser
+  password: mypassword
+  vhost: myvhost
+
+  # Queue settings
+  queue:
+    name: my_queue
+    durable: true
+    exclusive: false
+    auto_delete: false
+
+  # Exchange settings
+  exchange:
+    name: my_exchange
+    type: direct
+    durable: true
+    auto_delete: false
+
+  # Binding settings
+  binding:
+    queue: my_queue
+    exchange: my_exchange
+    routing_key: my_routing_key
