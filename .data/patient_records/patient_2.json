@@ -1,0 +1,29 @@
+{
+  "patient_id": 2,
+  "name": "Jane Smith",
+  "date_of_birth": "1995-06-01",
+  "gender": "female",
+  "address": {
+    "street": "456 Elm St",
+    "city": "Othertown",
+    "state": "NY",
+    "zip": "67890"
+  },
+  "phone_number": "555-123-4567",
+  "email": "janesmith@example.com",
+  "medical_history": [
+    {
+      "condition": "asthma",
+      "diagnosis_date": "2012-01-01",
+      "treatment": "inhaler"
+    }
+  ],
+  "medications": [
+    {
+      "name": "albuterol",
+      "dosage": "2puffs",
+      "frequency": "as needed"
+    }
+  ],
+  "allergies": []
+}
