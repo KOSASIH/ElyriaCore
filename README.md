@@ -39,7 +39,7 @@ We welcome contributions from the community! Please see our CONTRIBUTING.md file
 
 # License
 
-ElyriaCore is licensed under the Apache License 2.0.
+ElyriaCore is licensed under the MIT License. 
 
 # Acknowledgments
 
