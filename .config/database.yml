@@ -1,0 +1,34 @@
+database:
+  type: postgresql
+  host: localhost
+  port: 5432
+  username: myuser
+  password: mypassword
+  database: mydatabase
+
+  # Connection pool settings
+  pool:
+    min_size: 5
+    max_size: 20
+    timeout: 30
+
+  # Database schema settings
+  schema:
+    name: my_schema
+    tables:
+      - name: my_table
+        columns:
+          - name: id
+            type: integer
+            primary_key: true
+          - name: name
+            type: string
+            length: 255
+          - name: email
+            type: string
+            length: 255
+
+  # Database migration settings
+  migration:
+    path: /path/to/migrations
+    version: 1.0.0
