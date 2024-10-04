@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Record View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Medical Record View</h1>
+    <div class="medical-record-info">
+        <h2>Medical Record Information</h2>
+        <p>Medical Record ID: {{ medical_record.id }}</p>
+        <p>Patient ID: {{ medical_record.patient_id }}</p>
+        <p>Diagnosis: {{ medical_record.diagnosis }}</p>
+        <p>Treatment: {{ medical_record.treatment }}</p>
+        <p>Test Results: {{ medical_record.test_results }}</p>
+    </div>
+    <div class="patient-info">
+        <h2>Patient Information</h2>
+        <p>Name: {{ patient.name }}</p>
+        <p>Date of Birth: {{ patient.date_of_birth }}</p>
+        <p>Address: {{ patient.address }}</p>
+        <p>Phone Number: {{ patient.phone_number }}</p>
+        <p>Email: {{ patient.email }}</p>
+    </div>
+</body>
+</html>
