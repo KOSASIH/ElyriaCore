@@ -1,0 +1,10 @@
+symptom1,symptom2,symptom3,symptom4,symptom5,symptom6,symptom7,symptom8,symptom9,symptom10,disease
+1,0,1,1,0,1,0,1,1,0,Disease A
+0,1,0,0,1,0,1,0,0,1,Disease B
+1,1,1,0,0,1,1,0,1,0,Disease C
+0,0,0,1,1,0,0,1,0,1,Disease D
+1,0,1,1,0,1,0,1,1,0,Disease A
+0,1,0,0,1,0,1,0,0,1,Disease B
+1,1,1,0,0,1,1,0,1,0,Disease C
+0,0,0,1,1,0,0,1,0,1,Disease D
+...
