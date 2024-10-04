@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Patient View</h1>
+    <div class="patient-info">
+        <h2>Patient Information</h2>
+        <p>Name: {{ patient.name }}</p>
+        <p>Date of Birth: {{ patient.date_of_birth }}</p>
+        <p>Address: {{ patient.address }}</p>
+        <p>Phone Number: {{ patient.phone_number }}</p>
+        <p>Email: {{ patient.email }}</p>
+    </div>
+    <div class="medical-records">
+        <h2>Medical Records</h2>
+        <ul>
+            {% for medical_record in patient.medical_records %}
+                <li>
+                    <p>Medical Record ID: {{ medical_record.id }}</p>
+                    <p>Diagnosis: {{ medical_record.diagnosis }}</p>
+                    <p>Treatment: {{ medical_record.treatment }}</p>
+                    <p>Test Results: {{ medical_record.test_results }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
