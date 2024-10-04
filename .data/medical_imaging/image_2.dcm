@@ -1,0 +1,28 @@
+// DICOM file header
+0000,0000  44 49 43 4d  // DICOM magic number
+0000,0004  01 00 00 00  // DICOM version
+0000,0008  01 00 00 00  // SOP class UID
+0000,0010  01 00 00 00  // SOP instance UID
+0000,0020  01 00 00 00  // study date
+0000,0030  01 00 00 00  // study time
+0000,0040  01 00 00 00  // patient ID
+0000,0050  01 00 00 00  // patient name
+0000,0060  01 00 00 00  // patient birth date
+0000,0070  01 00 00 00  // patient sex
+0000,0080  01 00 00 00  // modality
+0000,0090  01 00 00 00  // series description
+0000,00A0  01 00 00 00  // series number
+0000,00B0  01 00 00 00  // acquisition date
+0000,00C0  01 00 00 00  // acquisition time
+0000,00D0  01 00 00 00  // image type
+0000,00E0  01 00 00 00  // image dimensions
+0000,00F0  01 00 00 00  // pixel spacing
+0000,0100  01 00 00 00  // slice thickness
+0000,0110  01 00 00 00  // slice location
+0000,0120  01 00 00 00  // image data
+
+// Image data
+0000,0130  00 00 00 00  // pixel data
+0000,0140  00 00 00 00  // pixel data
+0000,0150  00 00 00 00  // pixel data
+...
