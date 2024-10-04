@@ -1,0 +1,33 @@
+---
+name: my-storage-account
+type: Microsoft.Storage/storageAccounts
+apiVersion: 2020-08-01-preview
+location: West US
+tags:
+  environment: production
+properties:
+  accountType: Standard_LRS
+  accessTier: Hot
+  sku:
+    name: Standard_LRS
+  kind: StorageV2
+  encryption:
+    services:
+      blob:
+        enabled: true
+      file:
+        enabled: true
+      queue:
+        enabled: true
+      table:
+        enabled: true
+    keySource: Microsoft.Storage
+  networkAcls:
+    bypass: AzureServices
+    defaultAction: Deny
+    ipRules:
+      - action: Allow
+        ipAddressOrRange: 192.168.1.0/24
+    virtualNetworkRules:
+      - action: Allow
+        virtualNetworkResourceId: /subscriptions/your-subscription-id/resourceGroups/your-resource-group/providers/Microsoft.Network/virtualNetworks/your-virtual-network
