@@ -1,0 +1,12 @@
+api_keys:
+  - name: my_api_key
+    key: my_api_key_value
+    secret: my_api_secret_value
+    algorithm: HS256
+    expires_in: 3600
+
+  - name: my_other_api_key
+    key: my_other_api_key_value
+    secret: my_other_api_secret_value
+    algorithm: RS256
+    expires_in: 7200
