@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  EC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: 'ami-0c94855ba95c71c99'
+      InstanceType: 't2.micro'
+      KeyName: 'my-key-pair'
+      SecurityGroups:
+        - !Ref 'SecurityGroup'
+      Tags:
+        - Key: 'Name'
+          Value: 'My EC2 Instance'
+
+  SecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: 'My security group'
+      VpcId: !Ref 'VPC'
+      Tags:
+        - Key: 'Name'
+          Value: 'My Security Group'
+      SecurityGroupIngress:
+        - IpProtocol: 'tcp'
+          FromPort: 22
+          ToPort: 22
+          CidrIp: '0.0.0.0/0'
+
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      Tags:
+        - Key: 'Name'
+          Value: 'My VPC'
