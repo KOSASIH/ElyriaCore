@@ -1,0 +1,10 @@
+patient_id,disease,age,sex,symptom1,symptom2,symptom3,symptom4,symptom5,treatment_outcome
+1,Disease A,30,M,1,0,1,1,0,0.8
+2,Disease B,25,F,0,1,0,0,1,0.6
+3,Disease C,40,M,1,1,1,0,0,0.9
+4,Disease D,35,F,0,0,0,1,1,0.7
+5,Disease A,20,M,1,0,1,1,0,0.8
+6,Disease B,30,F,0,1,0,0,1,0.6
+7,Disease C,45,M,1,1,1,0,0,0.9
+8,Disease D,40,F,0,0,0,1,1,0.7
+...
