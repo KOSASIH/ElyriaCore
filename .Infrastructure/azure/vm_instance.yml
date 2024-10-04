@@ -1,0 +1,34 @@
+---
+name: my-vm-instance
+type: Microsoft.Compute/virtualMachines
+apiVersion: 2020-06-01
+location: West US
+tags:
+  environment: production
+properties:
+  hardwareProfile:
+    vmSize: Standard_DS2_v2
+  osProfile:
+    computerName: my-vm-instance
+    adminUsername: my-admin-username
+    adminPassword: my-admin-password
+    windowsConfiguration:
+      provisionVMAgent: true
+      enableAutomaticUpdates: true
+  storageProfile:
+    imageReference:
+      publisher: MicrosoftWindowsServer
+      offer: WindowsServer
+      sku: 2019-Datacenter
+      version: latest
+    osDisk:
+      createOption: FromImage
+      caching: ReadOnly
+      diskSizeGB: 128
+  networkProfile:
+    networkInterfaces:
+      - id: /subscriptions/your-subscription-id/resourceGroups/your-resource-group/providers/Microsoft.Network/networkInterfaces/my-nic
+  diagnosticsProfile:
+    bootDiagnostics:
+      enabled: true
+      storageUri: https://your-storage-account-name.blob.core.windows.net/
