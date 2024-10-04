@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  RDSInstance:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBInstanceClass: 'db.t2.micro'
+      DBInstanceIdentifier: 'my-rds-instance'
+      Engine: 'mysql'
+      MasterUsername: 'my-master-username'
+      MasterUserPassword: 'my-master-password'
+      VPCSecurityGroups:
+        - !Ref 'SecurityGroup'
+      Tags:
+        - Key: 'Name'
+          Value: 'My RDS Instance'
+
+  SecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: 'My security group'
+      VpcId: !Ref 'VPC'
+      Tags:
+        - Key: 'Name'
+          Value: 'My Security Group'
+      SecurityGroupIngress:
+        - IpProtocol: 'tcp'
+          FromPort: 3306
+          ToPort: 3306
+          CidrIp: '0.0.0.0/0'
+
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      Tags:
+        - Key: 'Name'
+          Value: 'My VPC'
