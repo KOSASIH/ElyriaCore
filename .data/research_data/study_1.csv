@@ -1,0 +1,7 @@
+"Patient ID","Age","Sex","Disease","Treatment","Outcome"
+"1",25,"Male","Cancer","Surgery",1
+"2",30,"Female","Diabetes","Medication",0
+"3",35,"Male","Heart Disease","Lifestyle Changes",1
+"4",20,"Female","Asthma","Inhaler",0
+"5",40,"Male","Cancer","Chemotherapy",1
+...
