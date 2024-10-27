@@ -1,0 +1,11 @@
+Analisis AI dilakukan secara offline, dan outputnya dikirimkan ke Blockchain untuk disimpan secara immutable.
+
+
+2. Data dari perangkat IoT dikumpulkan secara real-time menggunakan protokol MQTT dan dapat dianalisis lebih lanjut oleh algoritma AI.
+
+
+3. Manajemen Data dilakukan menggunakan Blockchain, memastikan transparansi dan keamanan, khususnya dalam penyimpanan data genomik dan hasil pengobatan.
+
+
+
+Proyek ini menggabungkan beberapa teknologi tingkat lanjut yang bekerja secara sinergis untuk menciptakan sistem kesehatan cerdas yang aman, adaptif, dan skalabel.

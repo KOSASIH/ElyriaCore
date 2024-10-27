@@ -1,0 +1,24 @@
+import paho.mqtt.client as mqtt
+
+# Callback ketika terhubung ke broker
+def on_connect(client, userdata, flags, rc):
+    print("Terhubung dengan kode status: " + str(rc))
+    client.subscribe("elyriacore/devices")
+
+# Callback ketika pesan diterima
+def on_message(client, userdata, msg):
+    print(f"Pesan diterima dari {msg.topic}: {msg.payload}")
+
+# Setup MQTT client
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
+
+# Hubungkan ke broker
+client.connect("broker.hivemq.com", 1883, 60)
+
+# Contoh pengiriman data dari IoT device
+client.publish("elyriacore/devices", payload="Data sensor IoT terkini")
+
+# Jalankan loop untuk terus mendengarkan data
+client.loop_start()
