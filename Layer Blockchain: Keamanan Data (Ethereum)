@@ -1,0 +1,24 @@
+from web3 import Web3
+
+# Connect to Ethereum blockchain
+w3 = Web3(Web3.HTTPProvider('http://localhost:8545'))
+
+# ABI dan address contract (ini hanya contoh placeholder)
+contract_abi = '[CONTRACT_ABI]'
+contract_address = '0xYourContractAddress'
+
+contract = w3.eth.contract(address=contract_address, abi=contract_abi)
+
+# Simpan data genomik pada blockchain
+def store_genomics_data_on_blockchain(patient_id, genomic_data):
+    txn = contract.functions.storeGenomicsData(patient_id, genomic_data).buildTransaction({
+        'gas': 2000000,
+        'gasPrice': w3.toWei('50', 'gwei'),
+        'from': w3.eth.accounts[0],
+        'nonce': w3.eth.getTransactionCount(w3.eth.accounts[0])
+    })
+    signed_txn = w3.eth.account.sign_transaction(txn, private_key='YourPrivateKey')
+    w3.eth.sendRawTransaction(signed_txn.rawTransaction)
+    
+# Contoh penyimpanan data baru
+store_genomics_data_on_blockchain("patient_123", new_patient_data.tolist())
